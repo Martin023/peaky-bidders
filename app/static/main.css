@@ -1,6 +1,6 @@
 body {
   background: #212121;
-  color: #333333;
+  color: white;
   margin-top: 5rem;
 }
 
@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-steel {
-  background-color: #5002642;
+  background-color: #002642;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
+}
+
+.carousel{
+  width: 100vw;
 }
 .account-img {
   height: 125px;
