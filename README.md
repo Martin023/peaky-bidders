@@ -17,12 +17,27 @@ the sellers so that they can provide the requested products. Buyers will be able
 ## User Stories
 These are the behaviours/features that the application implements for use by a user.
 
-As a user I would like to:
+A user can:
 
-bid on products on time.
+    login and signup.
+
+    view the current items on auction.
+
+    bid on an item.
+
+    poll/suggest an item that they would want to see.
+ 
+    upvote/downvote a poll.
+
+    see top items for grabs.
+
+    view different categories of items to bid on.
+
+    admin can post items for auction.
 
 ## SetUp/Installation Requirements
 python3
+
 
 ## Cloning
 In your terminal
@@ -35,8 +50,17 @@ $ cd peaky-bidders
 To run the test for the class files:
 
 $ python3.8 manage.py 
-Technologies Used
+
+## Technologies Used
+
    python(flask)
+   
+   postgressql
+
+   jquery
+
+   bootstrap
+
  
 ## License
 ## MIT License
