@@ -16,7 +16,7 @@ nav{
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #EBCBF4;
+  color: white;
 }
 
 .site-header .navbar-nav .nav-link:hover {
@@ -48,8 +48,6 @@ nav{
   margin-bottom: 20vh;
   float:right;
 
-
-
 }
 
 .account-img {
@@ -61,4 +59,34 @@ nav{
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+/* CATEGORIES */
+.vintage{
+  width: 100vw;
+  height: 73vh;
+  
+}
+.jumbotron{
+  margin-top: -5vh;
+  background-image:url('https://media.istockphoto.com/photos/classic-american-muscle-car-picture-id184847285?b=1&k=20&m=184847285&s=170667a&w=0&h=BZY8xk3bWbTbZ6iDQ2TVlH5y1Fb-4vRFZ17x8vR5stc=');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.caption{
+ background-color: #e59500;
+ width: 25vw;
+ position: absolute;
+ left: 3vw;
+ bottom: 5vh;
+ text-align: center;
+ border-radius: 6px;
+}
+
+.bid{
+  border: 1px solid #e59500;
+  border-radius:5px;
+  padding:1vh 3vw;
 }

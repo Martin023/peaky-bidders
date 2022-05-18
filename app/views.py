@@ -19,7 +19,7 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
-
+# USER CREDENTIALS
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -90,3 +90,11 @@ def account():
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
     return render_template('account.html', title='Account',
                            image_file=image_file, form=form)
+
+
+# FUNCTIONALITY
+@app.route('/home/cars')
+def cars():
+    title='Vintage cars'
+
+    return render_template('cars.html',title=title)
