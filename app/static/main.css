@@ -1,32 +1,57 @@
 body {
-  background: #212121;
-  color: white;
+  background: white;
+  color: #2E0E02;
   margin-top: 5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+h1, h2, h3, h4, h5, h6 ,hr{
+  color: #2E0E02;
+}
+nav{
+  background-color: #581908;
 }
 
 .bg-steel {
-  background-color: #002642;
+  background-color: #581908;
 }
 
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #EBCBF4;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: white;
 }
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
-
-.carousel{
-  width: 100vw;
+#title{
+  color: white;
+  
 }
+.carousel{
+  
+  width: 100%;
+  margin-top: -5vh;
+}
+
+.carousel-item img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.carousel-caption{
+  color: white;
+  font-weight:bold;
+  font-size:large;
+  margin-bottom: 20vh;
+  float:right;
+
+
+
+}
+
 .account-img {
   height: 125px;
   width: 125px;
