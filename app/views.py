@@ -18,7 +18,7 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
-
+# USER CREDENTIALS
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -91,8 +91,10 @@ def account():
                            image_file=image_file, form=form)
 
 
-@app.route('/market')
-@login_required
-def market_page():
-    items = Item.query.all()
-    return render_template('market.html', items=items)
+# FUNCTIONALITY
+@app.route('/home/cars')
+def cars():
+    title='Vintage cars'
+
+    return render_template('cars.html',title=title)
+
