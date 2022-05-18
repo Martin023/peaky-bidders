@@ -15,7 +15,6 @@ class User(db.Model, UserMixin):
     image_file = db.Column(db.String(20), nullable=False, default='default.png')
     password = db.Column(db.String(60), nullable=False)
     Bids = db.Column(db.Integer(), nullable=False, default=0)
-    items = db.relationship('Item', backref='owned_user', lazy=True)
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
@@ -23,11 +22,12 @@ class User(db.Model, UserMixin):
 
 class Item(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
+    image_file = db.Column(db.String(20), nullable=False, default='default.png')
     name = db.Column(db.String(length=30), nullable=False, unique=True)
     price = db.Column(db.Integer(), nullable=False)
     category = db.Column(db.String(length=12), nullable=False)
     description = db.Column(db.String(length=1024), nullable=False, unique=True)
-    owner = db.Column(db.Integer(), db.ForeignKey('user.id'))
+
 
     def __repr__(self):
         return f'Item{self.name}{self.description}'

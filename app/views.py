@@ -3,7 +3,7 @@ import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
-from app.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm
 from app.models import User, Item
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -17,6 +17,7 @@ def home():
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
+
 
 # USER CREDENTIALS
 @app.route("/register", methods=['GET', 'POST'])
@@ -91,10 +92,21 @@ def account():
                            image_file=image_file, form=form)
 
 
+@app.route("/admin", methods=['GET', 'POST'])
+def admin_page():
+    itemform = ItemsForm()
+    if itemform.validate_on_submit():
+        item = Item(name=itemform.name.data, category=itemform.category.data, description=itemform.description.data, price=itemform.price.data, image_file=itemform.picture.data)
+        db.session.add(item)
+        db.session.commit()
+        flash('The Item been added successfully!', 'success')
+        return redirect(url_for('home'))
+    return render_template('admin.html', title='Admin', itemform=itemform)
+
+
 # FUNCTIONALITY
 @app.route('/home/cars')
 def cars():
-    title='Vintage cars'
+    title = 'Vintage cars'
 
-    return render_template('cars.html',title=title)
-
+    return render_template('cars.html', title=title)
