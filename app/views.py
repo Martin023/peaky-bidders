@@ -4,14 +4,13 @@ from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
 from app.forms import RegistrationForm, LoginForm, UpdateAccountForm
-from app.models import User
+from app.models import User, Item
 from flask_login import login_user, current_user, logout_user, login_required
 
 
 @app.route("/")
 @app.route("/home")
 def home():
-
     return render_template('index.html')
 
 
@@ -98,3 +97,4 @@ def cars():
     title='Vintage cars'
 
     return render_template('cars.html',title=title)
+
