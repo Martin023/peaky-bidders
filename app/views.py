@@ -108,5 +108,7 @@ def admin_page():
 @app.route('/home/cars')
 def cars():
     title = 'Vintage cars'
+    
+    cars=Item.query.filter_by(category='Classic Cars').all()
 
-    return render_template('cars.html', title=title)
+    return render_template('cars.html', title=title,cars=cars)
