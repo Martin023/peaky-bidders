@@ -114,6 +114,7 @@ def cars():
     return render_template('cars.html', title=title,cars=cars)
 
 
-@app.route("/bid")
+@app.route("/bid", methods=['GET', 'POST'])
 def bid():
+    bid
     return render_template('bid-now.html')

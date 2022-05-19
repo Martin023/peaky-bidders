@@ -9,10 +9,14 @@
             <h2 align="centre">BID CLOSES IN: <strong>3 Days</strong></h2>
         </div>
         <div>
-            <h4>Enter BID</h4>
+            <form action='#' method="post">
+                <h4>Enter BID: </h4>
             <p>Bid will be entered o your behalf up to your selected maximum bid.</p>
             <p>Bid range : 300,000Ksh - 1.2M ksh</p>
             <label for="Bid amount">Bidders stake:
+                <input id="price"type="number" placeholder="Bid amount"
+                name="price"></input>
+
                 <select>
                     <option value="">500,000KSh</option>
                     <option value="">700,000Ksh</option>
@@ -23,8 +27,11 @@
             </label>
             <p>Currency converter</p>
         
-            <button>Confirm Bid</button>
+            <button type="submit">Confirm Bid</button>
             <button>Cancel</button>
+
+            </form>
+            
         </div>
     </div>
     
@@ -34,7 +41,7 @@
         <div>
             <h2>SUMMARY</h2>
     
-            <p>Item bid on: </p>
+            <p>Item bid on: {{price}}</p>
             <p>Date: </p>
             <p>Payment method: </p>
             <p>Thank you!: </p>

@@ -1,7 +1,9 @@
+from xmlrpc.client import DateTime
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField,TextAreaField
+from sqlalchemy import Integer
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField,TextAreaField,IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from app.models import User
 
@@ -66,3 +68,10 @@ class ItemsForm(FlaskForm):
     price = StringField('Estimated Price', validators=[DataRequired()])
     description = TextAreaField('Description',validators=[DataRequired()])
     submit = SubmitField('Post')
+
+
+class BidForm(FlaskForm):
+    price = IntegerField('Enter Your BID',validators=[DataRequired()] )
+    
+    
+    submit = SubmitField('Place Bid')
