@@ -90,7 +90,6 @@ def account():
 
 @app.route("/admin", methods=['GET', 'POST'])
 def admin_page():
-    # item=Item.query.filter_by(id=id).first()
     form = ItemsForm()
     if form.validate_on_submit():
         if form.picture.data:
@@ -154,7 +153,6 @@ def electronics():
 def furniture():
     title = 'Furniture'
 
-    
     furniture = Item.query.filter_by(category='Furniture').all()
 
     return render_template('furniture.html', title=title, furniture=furniture)
