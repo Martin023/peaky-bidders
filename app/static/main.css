@@ -90,3 +90,15 @@ nav{
   border-radius:5px;
   padding:1vh 3vw;
 }
+.contact{
+  padding-top: 3rem;
+}
+.contact-sec{
+  width: 100%;
+}
+.contact-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
