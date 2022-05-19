@@ -1,5 +1,4 @@
 {% extends 'base.html'%}
-{% import 'bootstrap/wtf.html' as wtf %}
 
 
 {% block content %}
@@ -23,4 +22,39 @@
     <div class="col-md-1"></div>
 </div>
 {
+<form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Post</legend>
+                <div class="form-group">
+                    {{ form.name.label(class="form-control-label") }}
+                    {{ form.name(class="form-control form-control-lg") }}
+
+                </div>
+                <div class="form-group">
+                    {{ form.category.label(class="form-control-label") }}
+                    {{ form.category(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.description.label(class="form-control-label") }}
+                    {{ form.description(class="form-control form-control-lg") }}
+                <div class="form-group">
+                    {{ form.price.label(class="form-control-label") }}
+                    {{ form.price(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.picture.label() }}
+                    {{ form.picture(class="form-control-file") }}
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
 {% endblock %}

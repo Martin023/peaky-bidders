@@ -13,6 +13,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 def home():
     return render_template('index.html')
 
+
 # USER CREDENTIALS
 @app.route("/register", methods=['GET', 'POST'])
 def register():
@@ -88,6 +89,7 @@ def account():
 
 @app.route("/admin", methods=['GET', 'POST'])
 def admin_page():
+<<<<<<< HEAD
     itemform = ItemsForm()
     if itemform.validate_on_submit():
         item = Item(name=itemform.name.data, category=itemform.category.data, description=itemform.description.data, price=itemform.price.data, image_file=itemform.picture.data)
@@ -97,55 +99,80 @@ def admin_page():
         flash('The Item been added successfully!', 'success')
         return redirect(url_for('home'))
     return render_template('admin.html', title='Admin',item=item, itemform=itemform)
+=======
+    form = ItemsForm()
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture_file = save_picture(form.picture.data)
+            item = Item(name=form.name.data, category=form.category.data, description=form.description.data,
+                        price=form.price.data, image_file=picture_file)
+        db.session.add(item)
+        db.session.commit()
+
+        return redirect(url_for('cars'))
+    return render_template('admin.html', form=form)
+>>>>>>> 5fd0519642c3fe02a5faa9b63e5ee0fa3c0579f3
 
 
 # FUNCTIONALITY
 @app.route('/home/NFTs')
 def nft():
     title = 'NFTs'
-    
-    NFTs=Item.query.filter_by(category='NFTs').all()
 
-    return render_template('NFTs.html', title=title,NFTs=NFTs)
+    NFTs = Item.query.filter_by(category='NFTs').all()
+
+    return render_template('NFTs.html', title=title, NFTs=NFTs)
+
 
 @app.route('/home/jewellery')
 def jewellery():
     title = 'Jewellery'
-    
-    jewellery=Item.query.filter_by(category='Jewellery').all()
 
-    return render_template('jewellery.html', title=title,jewellery=jewellery)
+    jewellery = Item.query.filter_by(category='Jewellery').all()
+
+    return render_template('jewellery.html', title=title, jewellery=jewellery)
+
 
 @app.route('/home/cars')
 def cars():
     title = 'Vintage cars'
-    
-    cars=Item.query.filter_by(category='Classic Cars').all()
 
-    return render_template('cars.html', title=title,cars=cars)
+    cars = Item.query.filter_by(category='Classic Cars').all()
+
+    return render_template('cars.html', title=title, cars=cars)
+
 
 @app.route('/home/artworks')
 def artworks():
     title = 'Artworks'
-    
-    artworks=Item.query.filter_by(category='Artworks').all()
 
-    return render_template('artworks.html', title=title,artworks=artworks)
+    artworks = Item.query.filter_by(category='Artworks').all()
+
+    return render_template('artworks.html', title=title, artworks=artworks)
 
 
 @app.route('/home/electronics')
 def electronics():
     title = 'Electronics'
-    
-    electronics=Item.query.filter_by(category='Electronics').all()
 
-    return render_template('electronics.html', title=title,electronics=electronics)
+    electronics = Item.query.filter_by(category='Electronics').all()
+
+    return render_template('electronics.html', title=title, electronics=electronics)
 
 
 @app.route('/home/furniture')
 def furniture():
     title = 'Furniture'
-    
-    furniture=Item.query.filter_by(category='Furniture').all()
 
+<<<<<<< HEAD
     return render_template('furniture.html', title=title,furniture=furniture)
+=======
+    furniture = Item.query.filter_by(category='Furniture').all()
+
+    return render_template('furniture.html', title=title, furniture=furniture)
+
+
+@app.route("/bid")
+def bid():
+    return render_template('bid-now.html')
+>>>>>>> 5fd0519642c3fe02a5faa9b63e5ee0fa3c0579f3
