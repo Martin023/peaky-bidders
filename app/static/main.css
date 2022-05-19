@@ -102,3 +102,22 @@ nav{
   justify-content: center;
   align-items: center;
 }
+.contact-inner-col{
+  margin: 2rem;
+  flex: 1 1 20rem;
+  text-align: center;
+}
+.contact-inner-col h1{
+  padding: 1rem 0;
+  color: #2E0E02;
+  font-size: 3rem;
+  letter-spacing: .1rem;
+  text-transform: capitalize;
+}
+.contact-inner-col p{
+  padding: .5rem 0;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color-interpolation-filters: linearRGB;
+}
