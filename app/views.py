@@ -112,3 +112,8 @@ def cars():
     cars=Item.query.filter_by(category='Classic Cars').all()
 
     return render_template('cars.html', title=title,cars=cars)
+
+
+@app.route("/bid")
+def bid():
+    return render_template('bid-now.html')
