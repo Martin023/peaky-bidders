@@ -2,7 +2,11 @@
 
 
 {% block content %}
-<form method="POST" action="" enctype="multipart/form-data">
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+       <form method="POST" action="" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Post</legend>
@@ -37,4 +41,20 @@
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
         </form>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-title">
+                <h2>{{item.name}}</h2> </div>
+                <div class="card-body">
+                    <h5>{{item.category}} </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+{
+
 {% endblock %}
