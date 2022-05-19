@@ -94,24 +94,27 @@ def account():
 
 @app.route("/admin", methods=['GET', 'POST'])
 def admin_page():
-    itemform = ItemsForm()
-    if itemform.validate_on_submit():
-        item = Item(name=itemform.name.data, category=itemform.category.data, description=itemform.description.data, price=itemform.price.data, image_file=itemform.picture.data)
+    form = ItemsForm()
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture_file = save_picture(form.picture.data)
+            item = Item(name=form.name.data, category=form.category.data, description=form.description.data,
+                        price=form.price.data, image_file=picture_file)
         db.session.add(item)
         db.session.commit()
-        flash('The Item been added successfully!', 'success')
-        return redirect(url_for('home'))
-    return render_template('admin.html', title='Admin', itemform=itemform)
+
+        return redirect(url_for('cars'))
+    return render_template('admin.html', form=form)
 
 
 # FUNCTIONALITY
 @app.route('/home/cars')
 def cars():
     title = 'Vintage cars'
-    
-    cars=Item.query.filter_by(category='Classic Cars').all()
 
-    return render_template('cars.html', title=title,cars=cars)
+    cars = Item.query.filter_by(category='Classic Cars').all()
+
+    return render_template('cars.html', title=title, cars=cars)
 
 
 @app.route("/bid")
