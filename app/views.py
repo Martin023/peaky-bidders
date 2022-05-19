@@ -89,17 +89,7 @@ def account():
 
 @app.route("/admin", methods=['GET', 'POST'])
 def admin_page():
-<<<<<<< HEAD
-    itemform = ItemsForm()
-    if itemform.validate_on_submit():
-        item = Item(name=itemform.name.data, category=itemform.category.data, description=itemform.description.data, price=itemform.price.data, image_file=itemform.picture.data)
-        
-        db.session.add(item)
-        db.session.commit()
-        flash('The Item been added successfully!', 'success')
-        return redirect(url_for('home'))
-    return render_template('admin.html', title='Admin',item=item, itemform=itemform)
-=======
+    
     form = ItemsForm()
     if form.validate_on_submit():
         if form.picture.data:
@@ -111,7 +101,6 @@ def admin_page():
 
         return redirect(url_for('cars'))
     return render_template('admin.html', form=form)
->>>>>>> 5fd0519642c3fe02a5faa9b63e5ee0fa3c0579f3
 
 
 # FUNCTIONALITY
@@ -164,9 +153,7 @@ def electronics():
 def furniture():
     title = 'Furniture'
 
-<<<<<<< HEAD
-    return render_template('furniture.html', title=title,furniture=furniture)
-=======
+    
     furniture = Item.query.filter_by(category='Furniture').all()
 
     return render_template('furniture.html', title=title, furniture=furniture)
@@ -175,4 +162,3 @@ def furniture():
 @app.route("/bid")
 def bid():
     return render_template('bid-now.html')
->>>>>>> 5fd0519642c3fe02a5faa9b63e5ee0fa3c0579f3
