@@ -146,3 +146,15 @@ nav{
   font-size: 1.5rem;
   color: white;
 }
+.social i{
+  padding: 1rem;
+  background: white;
+  color: brown;
+  font-size: 1.5rem;
+}
+.social i:hover{
+  transform: translateY(-2rem);
+  color: white;
+  cursor: pointer;
+  transition: .5s ease;
+}
