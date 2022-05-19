@@ -1,3 +1,6 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
 body {
   background: white;
   color: #2E0E02;
@@ -9,6 +12,8 @@ h1, h2, h3, h4, h5, h6 ,hr{
 }
 nav{
   background-color: #581908;
+  
+
 }
 
 .bg-steel {
@@ -159,4 +164,14 @@ nav{
  width:100% ;
  
 
+}
+.heit{
+  height:7vh;
+}
+strong{
+  font-family: 'Arvo', serif!important;
+}
+span{
+  font-family: 'Arvo', serif!important;
+  color: #e59500;
 }
