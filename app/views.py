@@ -115,5 +115,5 @@ def cars():
 
 
 @app.route("/bid")
-def about():
+def bid():
     return render_template('bid-now.html')
