@@ -62,7 +62,7 @@ class ItemsForm(FlaskForm):
     picture = FileField('Add Item Picture', validators=[FileAllowed(['png', 'jpg'])])
     category = SelectField('Category', choices=[('Classic Cars', 'Classic Cars'),('Electronics', 'Electronics'),
                                                ('Furniture', 'Furniture'), ('Jewellery','Jewellery'), ('Artworks','Artworks'),
-                                               ('NFTs', 'NFTs')], validators=[DataRequired()])
+                                               ('NFTs', 'NFTs'),('Electronics', 'Electronics')], validators=[DataRequired()])
     price = StringField('Estimated Price', validators=[DataRequired()])
     description = TextAreaField('Description',validators=[DataRequired()])
     submit = SubmitField('Post')
