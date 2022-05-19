@@ -27,8 +27,13 @@ nav{
   font-weight: 500;
 }
 #title{
-  color: white;
+  background-color: #e59500;
+  color: #2E0E02;
+  width: 30vw;
   
+}
+#title h1{
+  font-weight: bold;
 }
 .carousel{
   
@@ -89,4 +94,8 @@ nav{
   border: 1px solid #e59500;
   border-radius:5px;
   padding:1vh 3vw;
+}
+
+.bid-item{
+  margin-bottom: 5vh;
 }
