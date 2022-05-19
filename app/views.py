@@ -123,7 +123,6 @@ def cars():
 
     return render_template('cars.html', title=title,cars=cars)
 
-<<<<<<< HEAD
 @app.route('/home/artworks')
 def artworks():
     title = 'Artworks'
@@ -149,9 +148,3 @@ def furniture():
     furniture=Item.query.filter_by(category='Furniture').all()
 
     return render_template('furniture.html', title=title,furniture=furniture)
-=======
-
-@app.route("/bid")
-def bid():
-    return render_template('bid-now.html')
->>>>>>> 1f00d04471b85dda0c0bd1675c6aa9723f58c5db
