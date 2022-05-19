@@ -144,3 +144,14 @@ nav{
 .strong{
   color:#581908
 }
+
+.icons {
+  color:#e59500;
+  font-size: 40px;
+}
+.categories a{
+  text-decoration: none;
+}
+.categories a :hover{
+  color:#fff;
+}

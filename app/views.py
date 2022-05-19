@@ -1,10 +1,11 @@
+from hashlib import new
 import os
 import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
-from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm
-from app.models import User, Item
+from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm,BidForm
+from app.models import User, Item,Bids
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -89,7 +90,7 @@ def account():
 
 @app.route("/admin", methods=['GET', 'POST'])
 def admin_page():
-    
+    # item=Item.query.filter_by(id=id).first()
     form = ItemsForm()
     if form.validate_on_submit():
         if form.picture.data:
@@ -100,7 +101,7 @@ def admin_page():
         db.session.commit()
 
         return redirect(url_for('cars'))
-    return render_template('admin.html', form=form)
+    return render_template('admin.html', form=form, item=item)
 
 
 # FUNCTIONALITY
@@ -160,6 +161,28 @@ def furniture():
 
 
 @app.route("/bid", methods=['GET', 'POST'])
+@login_required
 def bid():
-    bid
-    return render_template('bid-now.html')
+
+    bidform=BidForm()
+    user=User.query.filter_by(id=current_user.id).first()
+
+    item = Item.query.filter_by(id=id).first()
+
+    if user is None:
+        
+        return redirect(url_for('login'))
+
+    if bidform.validate_on_submit():
+        
+        # price=bidform.price.data
+
+        new_bid= Bids(price=bidform.price.data)
+
+        db.session.add(new_bid)
+        db.session.commit()
+
+        return redirect(url_for('bid'))
+
+
+    return render_template('bid-now.html',user=user ,item=item, new_bid=new_bid)

@@ -61,17 +61,9 @@
     <section>
       <div class="container pb-5">
         <div class="row">
-            <div class="col-md-5 poll" style="margin-top:5vh;height:50vh">
-                <script type="text/javascript">
-                    (function(d,s,id,u){
-                      if (d.getElementById(id)) return;
-                      var js, sjs = d.getElementsByTagName(s)[0],
-                          t = Math.floor(new Date().getTime() / 1000000);
-                      js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
-                      sjs.parentNode.insertBefore(js, sjs);
-                    }(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
-                    </script><div id="os-widget-1005652" class="os_poll" data-path="/polls/2841620" data-of="victoria-makena" data-opinionstage-widget="91ebd997-6c96-4e06-9b0d-6ee4f647536b"></div>
-                    
+          <div class="col-md-5 poll" style="margin-top:5vh;height:50vh">
+            <img src="https://media.istockphoto.com/photos/non-fungible-token-crypto-currency-regulation-lawyer-technology-picture-id1322440587?b=1&k=20&m=1322440587&s=170667a&w=0&h=ICF-dsAQclMU53nUdu9aQGRdZzD5vN0Rs8bAdM1SQik=">
+          
             </div>
             <div class="col-md-7" style="margin-top: 5vh;">
                 <h1>About Us</h1>
@@ -138,43 +130,64 @@
                     
                   </div>
                   
-                <div class="subscribe" style="margin-top: 5vh;">
-                    <h2> Subscribe to Newsletter</h2>
-                    <hr>
-                <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <button type="submit" class="btn ">Submit</button>
-                </form>
-                  </div>
-                <div class="contacts" style="margin-top: 5vh;" >
-                        <h2>Contacts</h2>
-                        <p>phone number: 0712345678 <br>
-                        email address: peaky.bidders@mail.com <br>
-                      </p>
-                      <div class="row">
-                        <div class="col-md-4"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                        <div class="col-md-4"><i class="fa fa-twitter-square" aria-hidden="true"></i></div>
-                        <div class="col-md-4"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
-                      </div>
-                      
-                      
-                      
-                      </div>
-                </div>
-
+                
             </div>
         </div>
         </div>
     </section>
-    <footer>
+
+    <section>
+      <div class="row">
+        <div class="col-md-5">
+          {% block form  %}
+          {%include 'poll.html'%}
+           {%endblock%}
+        </div>
+        <div class="col-md-7">
+          <div class="subscribe container-fluid" style="margin-top: 5vh;">
+            <h2> Subscribe to Newsletter</h2>
+            <hr>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <button type="submit" class="btn ">Submit</button>
+        </form>
+          </div>
+        <div class="contacts" style="margin-top: 5vh;" >
+                <h2>Contacts</h2>
+                <p>phone number: 0712345678 <br>
+                email address: peaky.bidders@mail.com <br>
+              </p>
+              <div class="row icons">
+                <div class="col-md-3"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                <div class="col-md-3"><i class="fa fa-twitter-square" aria-hidden="true"></i></div>
+                <div class="col-md-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
+                <div class="col-md-3"><i class="fa fa-github" aria-hidden="true"></i></div>
+
+              </div>
+              
+              
+              
+              </div>
+        </div>
+      </div>
+
+      </div>
+
       
-      <p>c 2022 Peaky Bdders</p>
-    </footer>
-    
+
+    </section>
+    <section>
+      <footer>
+      
+        <p align="center"><i class="fa fa-copyright" aria-hidden="true"></i> 2022 Picky Bidders</p>
+      </footer>
+      
+    </section>
+   
         
        
         
