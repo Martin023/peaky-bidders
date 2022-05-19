@@ -3,5 +3,24 @@
 
 
 {% block content %}
-{{ wtf.quick_form(itemform,enctype="multipart/form-data") }}
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+       {{ wtf.quick_form(itemform,enctype="multipart/form-data") }} 
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-title">
+                <h2>{{item.name}}</h2> </div>
+                <div class="card-body">
+                    <h5>{{item.category}} </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+{
 {% endblock %}

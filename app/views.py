@@ -91,11 +91,12 @@ def admin_page():
     itemform = ItemsForm()
     if itemform.validate_on_submit():
         item = Item(name=itemform.name.data, category=itemform.category.data, description=itemform.description.data, price=itemform.price.data, image_file=itemform.picture.data)
+        
         db.session.add(item)
         db.session.commit()
         flash('The Item been added successfully!', 'success')
         return redirect(url_for('home'))
-    return render_template('admin.html', title='Admin', itemform=itemform)
+    return render_template('admin.html', title='Admin',item=item, itemform=itemform)
 
 
 # FUNCTIONALITY

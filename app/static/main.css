@@ -72,14 +72,56 @@ nav{
   height: 73vh;
   
 }
-.jumbotron{
+.cars{
   margin-top: -5vh;
-  background-image:url('https://media.istockphoto.com/photos/classic-american-muscle-car-picture-id184847285?b=1&k=20&m=184847285&s=170667a&w=0&h=BZY8xk3bWbTbZ6iDQ2TVlH5y1Fb-4vRFZ17x8vR5stc=');
+  background-image:url('https://media.istockphoto.com/photos/classic-cars-picture-id501278317?b=1&k=20&m=501278317&s=170667a&w=0&h=gNevY5FuI-o41yr2BIqywhQTQ-PJUinY70E8Gbo5ZQo=');
   background-repeat: no-repeat;
   background-size: 100%;
   object-fit: cover;
   position: relative;
 }
+
+.nft{
+  margin-top: -5vh;
+  background-image:url('https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmZ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.jewellery{
+  margin-top: -5vh;
+  background-image:url('https://media.istockphoto.com/photos/gold-silver-rings-and-chains-picture-id489814272?b=1&k=20&m=489814272&s=170667a&w=0&h=on8nFKt8gXab9Tm4hl3GThVfslokVF7Jcfc2kEcKPs8=');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.furniture{
+  margin-top: -5vh;
+  background-image:url('https://media.istockphoto.com/photos/soft-leather-chair-picture-id467025012?b=1&k=20&m=467025012&s=170667a&w=0&h=FMtj45ZeyQqZ4RCbnyQcKmzEyVrhWv-Q5ikKE6O7wWM=');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.art{
+  margin-top: -5vh;
+  background-image:url('https://media.istockphoto.com/photos/abstract-art-collage-of-young-woman-with-flowers-picture-id1323655349?b=1&k=20&m=1323655349&s=170667a&w=0&h=3Gx7O1hl1R62fyhQpD5rFrcySaSILlDHJ6QWiD0yMWY=');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.electronics{
+  margin-top: -5vh;
+  background-image:url('https://media.istockphoto.com/photos/retro-eighties-electronics-items-background-picture-id1056604952?b=1&k=20&m=1056604952&s=170667a&w=0&h=0lumZ7tkvTo_hdagrhRDgKyIFaqh8NyZjghMefcX3kI=');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
 .caption{
  background-color: #e59500;
  width: 25vw;
