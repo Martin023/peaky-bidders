@@ -121,3 +121,28 @@ nav{
   text-transform: capitalize;
   color-interpolation-filters: linearRGB;
 }
+.contact-inner-col input,
+.contact-inner-col textarea{
+  width: 80%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-bottom: .3rem solid grey;
+}
+.copyright{
+  display: flex;
+  margin-top: 5rem;
+  padding: 3rem;
+  text-align: center;
+  justify-content: space-between;
+  background: grey;
+}
+.copyright i{
+  font-size: 2rem;
+  color: brown;
+}
+.copyright p{
+  letter-spacing: .1rem;
+  font-size: 1.5rem;
+  color: white;
+}
