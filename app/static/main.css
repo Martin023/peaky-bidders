@@ -66,7 +66,53 @@ nav{
   font-size: 2.5rem;
 }
 
-/* CATEGORIES */
+.about-section {
+  margin-top: 5vh;
+}
+.about-img{
+  border-radius: 5px;
+  width: 30vw;
+}
+.categories{
+  margin-top: 5vh;
+}
+.deck{
+  margin-top: 7vh;
+  text-align: center;
+  
+}
+.cat{
+  height: 20vh;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  
+}
+.cat2{
+  margin-top: 4vh;
+  
+}
+.cat2 h5{
+  font-size: 2rem;
+}
+
+.why{
+  border-radius: 5px;
+  width: 20vw;
+  height: 30vh;
+}
+.reasons{
+  margin-top: 10vh;
+  
+}
+.why1{
+  margin-top: 3vh;
+  text-align: center;
+}
+
+.contacts{
+  margin-top: 10vh;
+  
+}
 .vintage{
   width: 100vw;
   height: 73vh;
@@ -155,8 +201,7 @@ nav{
 .categories a :hover{
   color:#fff;
 }
-.poll img{
- width:100% ;
+
  
 
-}
+
