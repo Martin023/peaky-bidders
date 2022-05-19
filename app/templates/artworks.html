@@ -8,8 +8,8 @@
         
         <div class="container vintage">
            <div class="card caption">
-              <h1 class="display-4">Vintage Cars</h1>
-          <p class="lead">Old is gold.</p>  
+              <h1 class="display-4">Artwork.</h1>
+          <p class="lead">Own a thought-provoking piece of history and culture.</p>  
            </div> 
          
         </div>
@@ -17,11 +17,11 @@
 
 
       <div class="container">
-        {% for item in cars %}
+        {% for item in artworks %}
         <div class="card bid-item">
             <div class="row">
                 <div class="col-md-4">
-                   <img src="{{url_for('static', filename='profile_pics/{{item.image_file}}')}}">
+                   <img class="card-img-top" src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500" alt="Card image cap"> 
                 </div>
                 <div class="col-md-5">
                 <div class="card-body">
@@ -35,7 +35,7 @@
              </div>
                 <div class="col-md-3">
                     <p class="card-text"><small class="text-muted">{{item.price}}</small></p>
-                    <button class="bid" ><a href="{{url_for('bid')}}">BID</a></button>
+                    <button class="bid" >BID</button>
                 </div>
 
             </div>

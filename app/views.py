@@ -13,12 +13,6 @@ from flask_login import login_user, current_user, logout_user, login_required
 def home():
     return render_template('index.html')
 
-
-@app.route("/about")
-def about():
-    return render_template('about.html', title='About')
-
-
 # USER CREDENTIALS
 @app.route("/register", methods=['GET', 'POST'])
 def register():
@@ -108,6 +102,22 @@ def admin_page():
 
 
 # FUNCTIONALITY
+@app.route('/home/NFTs')
+def nft():
+    title = 'NFTs'
+    
+    NFTs=Item.query.filter_by(category='NFTs').all()
+
+    return render_template('NFTs.html', title=title,NFTs=NFTs)
+
+@app.route('/home/jewellery')
+def jewellery():
+    title = 'Jewellery'
+    
+    jewellery=Item.query.filter_by(category='Jewellery').all()
+
+    return render_template('jewellery.html', title=title,jewellery=jewellery)
+
 @app.route('/home/cars')
 def cars():
     title = 'Vintage cars'
@@ -116,7 +126,35 @@ def cars():
 
     return render_template('cars.html', title=title, cars=cars)
 
+<<<<<<< HEAD
+@app.route('/home/artworks')
+def artworks():
+    title = 'Artworks'
+    
+    artworks=Item.query.filter_by(category='Artworks').all()
+
+    return render_template('artworks.html', title=title,artworks=artworks)
+
+
+@app.route('/home/electronics')
+def electronics():
+    title = 'Electronics'
+    
+    electronics=Item.query.filter_by(category='Electronics').all()
+
+    return render_template('electronics.html', title=title,electronics=electronics)
+
+
+@app.route('/home/furniture')
+def furniture():
+    title = 'Furniture'
+    
+    furniture=Item.query.filter_by(category='Furniture').all()
+
+    return render_template('furniture.html', title=title,furniture=furniture)
+=======
 
 @app.route("/bid")
 def bid():
     return render_template('bid-now.html')
+>>>>>>> 1f00d04471b85dda0c0bd1675c6aa9723f58c5db
