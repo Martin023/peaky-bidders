@@ -100,7 +100,7 @@ def admin_page():
         db.session.commit()
 
         return redirect(url_for('cars'))
-    return render_template('admin.html', form=form, item=item)
+    return render_template('admin.html', form=form, )
 
 
 # FUNCTIONALITY
