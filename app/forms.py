@@ -2,8 +2,12 @@ from xmlrpc.client import DateTime
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
+<<<<<<< HEAD
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, TextAreaField
+=======
 from sqlalchemy import Integer
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField,TextAreaField,IntegerField
+>>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from app.models import User
 
@@ -60,18 +64,39 @@ class UpdateAccountForm(FlaskForm):
 
 class ItemsForm(FlaskForm):
     name = StringField('Item Name',
-                           validators=[DataRequired(), Length(min=2, max=20)])
+                       validators=[DataRequired(), Length(min=2, max=20)])
     picture = FileField('Add Item Picture', validators=[FileAllowed(['png', 'jpg'])])
-    category = SelectField('Category', choices=[('Classic Cars', 'Classic Cars'),('Electronics', 'Electronics'),
-                                               ('Furniture', 'Furniture'), ('Jewellery','Jewellery'), ('Artworks','Artworks'),
-                                               ('NFTs', 'NFTs'),('Electronics', 'Electronics')], validators=[DataRequired()])
+    category = SelectField('Category', choices=[('Classic Cars', 'Classic Cars'), ('Electronics', 'Electronics'),
+                                                ('Furniture', 'Furniture'), ('Jewellery', 'Jewellery'),
+                                                ('Artworks', 'Artworks'),
+                                                ('NFTs', 'NFTs'), ('Electronics', 'Electronics')],
+                           validators=[DataRequired()])
     price = StringField('Estimated Price', validators=[DataRequired()])
-    description = TextAreaField('Description',validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired()])
     submit = SubmitField('Post')
 
 
+<<<<<<< HEAD
+class PurchaseItemForm(FlaskForm):
+    submit = SubmitField(label='Purchase Item!')
+
+
+class SellItemForm(FlaskForm):
+    submit = SubmitField(label='Sell Item!')
+
+
+class BidForm(FlaskForm):
+    name = StringField('Name',
+                           validators=[DataRequired(), Length(min=2, max=20)])
+    price = StringField('Price',
+                        validators=[DataRequired()])
+    submit = SubmitField('Bid')
+
+
+=======
 class BidForm(FlaskForm):
     price = IntegerField('Enter Your BID',validators=[DataRequired()] )
     
     
     submit = SubmitField('Place Bid')
+>>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d

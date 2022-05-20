@@ -4,10 +4,37 @@
 
 <div class="row mt-5">
     <div class="col-md-1"></div>
-    <div class="col-md-5">
-        <div class="container">
-            <h2 align="centre">BID CLOSES IN: <strong>3 Days</strong></h2>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+<div class="container-fluid">
+            <div class="content-section">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4 text-center">
+                            Bid Now
+                        </legend>
+                        <div class="form-group">
+                            {{ form.name.label(class="form-control-label") }}
+
+                                {{ form.name(class="form-control form-control-lg") }}
+
+                        </div>
+                        <div class="form-group">
+                            {{ form.price.label(class="form-control-label") }}
+
+                                {{ form.price(class="form-control form-control-lg") }}
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-outline-info") }}
+                    </div>
+                </form>
+            </div>
         </div>
+<<<<<<< HEAD
+=======
         <div>
 
             {{wtf.quick_form(bidform)}}
@@ -29,21 +56,36 @@
 
             </form> -->
             
+>>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
         </div>
+        <div class="col-md-3"></div>
     </div>
+
+
     
         
     
-    <div class="col-md-5">
+   <div class="col-5">
+       <div class="col-md-5">
         <div>
             <h2>SUMMARY</h2>
+<<<<<<< HEAD
+            {% for itemBid in itemBid %}
+
+            <p>Item bid on: {{itemBid.item}} </p>
+            <p>Payment method: {{itemBid.owner}}</p>
+            <p>Thank you!:{{itemBid.price}} </p>
+            {% endfor %}
+=======
     
             <p>Item bid on: {{price}}</p>
             <p>Date: </p>
             <p>Payment method: </p>
             <p>Thank you!: </p>
+>>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
         </div>
     </div>
+   </div>
     
 </div>
 
