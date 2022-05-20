@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = 'ed96823c766c274dc3bd19e0'
 app.config['UPLOADED_PHOTOS_DEST'] = 'app/static/photos'
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
-login_manager.login_view = "login_page"
+login_manager.login_view = "login"
 login_manager.login_message_category = "info"
 
 bootstrap = Bootstrap(app)

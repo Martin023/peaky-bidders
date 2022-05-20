@@ -34,7 +34,7 @@
               </div>
           </div>
           <div class="carousel-item">
-            <img  src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Third slide">
+            <img  src="https://images.unsplash.com/photo-1573407613054-1765da91bab2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNhbnZhcyUyMGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500" alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <div id="title" class="card">
                 <div class="card-body">
@@ -60,121 +60,159 @@
 
     <section>
       <div class="container pb-5">
-        <div class="row">
-            <div class="col-md-5 poll" style="margin-top:5vh;height:50vh">
-                <script type="text/javascript">
-                    (function(d,s,id,u){
-                      if (d.getElementById(id)) return;
-                      var js, sjs = d.getElementsByTagName(s)[0],
-                          t = Math.floor(new Date().getTime() / 1000000);
-                      js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
-                      sjs.parentNode.insertBefore(js, sjs);
-                    }(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
-                    </script><div id="os-widget-1005652" class="os_poll" data-path="/polls/2841620" data-of="victoria-makena" data-opinionstage-widget="91ebd997-6c96-4e06-9b0d-6ee4f647536b"></div>
-                    
-            </div>
-            <div class="col-md-7" style="margin-top: 5vh;">
+        <div class="row about-section">
+          <div class="col-md-4 ">
+              <img class="about-img" src="https://media.istockphoto.com/photos/gavel-on-auction-word-picture-id917901978?k=20&m=917901978&s=612x612&w=0&h=NULGu8-bVpy28gbW6AZbZlEVra-Q4s2rg607emPfkCs=" alt="">
+          </div>
+          <div class="col-md-1"></div>
+              <div class="col-md-6">
                 <h1>About Us</h1>
-                <div class="border-top pt-3">
-                <p>Our application bridges the gap between seller and buyer by sending the poll results directly to the sellers so that they can provide the requested products. Buyers can bid on products in real-time until the timer strikes zero.   </p></div>
+                <hr>
+                <div class="about">
+                <p>Our application enables buyers to bid on products in real-time. Unlike high-end auctions, the application is free for the general public to grab a piece of that Monalisa experience. <br> We bridge the gap between seller and buyer by sending poll results directly to the sellers so that they can provide the requested products.   </p></div>
+            </div>
+        </div>
 
-                
 
-                <div class="categories">
-                  <h1>Categories</h1>
-                  <div class="border-top pt-3">
-                  <div class="card-deck" style="margin-top: 5vh; text-align: center;">
-                    
-                    <div class="card"style="background-color: #e59500;">
-                      
-                      <div class="card-body">
-                        <a href="{{url_for('nft') }}"><h5 class="card-title">NFTs</h5></a>
-                        
-                      </div>
-                    </div>
-                    <div class="card"style="background-color: #e59500;">
-                      
-                      <div class="card-body">
-                        <a href="{{url_for('jewellery') }}"><h5 class="card-title">Jewellery</h5></a>
-                        
-                      </div>
-                    </div>
-                    <div class="card"style="background-color: #e59500;">
-                      
-                      <div class="card-body">
-                        <a href="{{url_for('furniture') }}"><h5 class="card-title">Furniture</h5></a>
-                        
-                       
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card-deck"style="margin-top: 5vh;text-align: center;">
-                    
-                    <div class="card"style="background-color: #e59500;">
-                      
-                      <div class="card-body">
-                        <a href="{{url_for('artworks') }}"><h5 class="card-title">Artworks</h5></a>
-                        
-                      </div>
-                    </div>
-                    <div class="card"style="background-color: #e59500;">
-                      
-                      <div class="card-body">
-                        <a href="{{url_for('electronics') }}"><h5 class="card-title">Electronics</h5></a>
-                        
-                      </div>
-                    </div>
-                    <div class="card"style="background-color: #e59500;">
-                      
-                      <div class="card-body">
-                        <a href="{{url_for('cars') }}"><h5 class="card-title">Classic Cars</h5></a>
-                       
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-
-                    
-                  </div>
+              <div class="categories">
+                <h1>Categories</h1>
+                <hr>
+                <div class="cards-cat">
+                <div class="card-deck deck" >
                   
-                <div class="subscribe" style="margin-top: 5vh;">
-                    <h2> Subscribe to Newsletter</h2>
-                    <hr>
-                <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <div class="card cat"style="background-color: #e59500;">
+                    
+                    <div class="card-body cat2">
+                      <a href="{{url_for('nft') }}"><h5 class="card-title">NFTs</h5></a>
+                      
+                    </div>
                   </div>
-                  <button type="submit" class="btn ">Submit</button>
-                </form>
+                  <div class="card cat"style="background-color: #e59500;">
+                    
+                    <div class="card-body cat2">
+                      <a href="{{url_for('jewellery') }}"><h5 class="card-title">Jewellery</h5></a>
+                      
+                    </div>
                   </div>
-                <div class="contacts" style="margin-top: 5vh;" >
-                        <h2>Contacts</h2>
-                        <p>phone number: 0712345678 <br>
-                        email address: peaky.bidders@mail.com <br>
-                      </p>
-                      <div class="row">
-                        <div class="col-md-4"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                        <div class="col-md-4"><i class="fa fa-twitter-square" aria-hidden="true"></i></div>
-                        <div class="col-md-4"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
-                      </div>
+                  <div class="card cat"style="background-color: #e59500;">
+                    
+                    <div class="card-body cat2">
+                      <a href="{{url_for('furniture') }}"><h5 class="card-title">Furniture</h5></a>
                       
                       
-                      
-                      </div>
+                    </div>
+                  </div>
                 </div>
 
+                <div class="card-deck deck">
+                  
+                  <div class="card cat"style="background-color: #e59500;">
+                    
+                    <div class="card-body cat2">
+                      <a href="{{url_for('artworks') }}"><h5 class="card-title">Artworks</h5></a>
+                      
+                    </div>
+                  </div>
+                  <div class="card cat"style="background-color: #e59500;">
+                    
+                    <div class="card-body cat2">
+                      <a href="{{url_for('electronics') }}"><h5 class="card-title">Electronics</h5></a>
+                      
+                    </div>
+                  </div>
+                  <div class="card cat"style="background-color: #e59500;">
+                    
+                    <div class="card-body cat2">
+                      <a href="{{url_for('cars') }}"><h5 class="card-title">Classic Cars</h5></a>
+                      
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </div>
+                  
+            <div class="reasons">
+              <h1>Why us?</h1>
+              <hr>
+              <div class="row">
+                
+                <div class="col-md-3 why0">
+                  
+                  <img class="why" src="https://media.istockphoto.com/photos/have-the-power-of-the-card-in-my-hand-picture-id926197250?b=1&k=20&m=926197250&s=170667a&w=0&h=fFtsjijG2v7hTVeX6k_-JtvKKY5wr-TaZ_iDabGq_zk=" alt="">
+                  <h3 class="why1">Convenient.</h3>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3 why0">
+                  <img class="why" src="https://media.istockphoto.com/photos/fortune-side-with-the-financially-free-picture-id1304258264?b=1&k=20&m=1304258264&s=170667a&w=0&h=G9ELNmBujhEc8CgyJ-jp6qTj9573QSVq5amklbKyn14=" alt="">
+                  <h3 class="why1">Free for all.</h3>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3 why0">
+                  <img class="why" src="https://media.istockphoto.com/photos/cost-value-matrix-graph-business-concept-picture-id1193782223?b=1&k=20&m=1193782223&s=170667a&w=0&h=aJAnphox57oslW7IWII_tXc9SWh_I41-H9Vn3VOuPTA=" alt="">
+                  <h3 class="why1">Affordable.</h3>
+                </div>
+              </div>
             </div>
-        </div>
-        </div>
+                
+
+            </div>
+        <!-- </div>
+        </div> -->
     </section>
-    <footer>
+
+    <section class="contacts">
+      <div class="row">
+        <div class="col-md-5">
+          {% block form  %}
+          {%include 'poll.html'%}
+           {%endblock%}
+        </div>
+        <div class="col-md-7">
+          <div class="subscribe container-fluid" style="margin-top: 5vh;">
+            <h1> Subscribe to Newsletter</h1>
+            <hr>
+            
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <button type="submit" class="btn ">Submit</button>
+        </form>
+          </div>
+        <div class="contacts" style="margin-top: 5vh;" >
+                <h1>Contacts</h1>
+                <p>phone number: 0712345678 <br>
+                email address: peaky.bidders@mail.com <br>
+              </p>
+              <div class="row icons">
+                <div class="col-md-3"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                <div class="col-md-3"><i class="fa fa-twitter-square" aria-hidden="true"></i></div>
+                <div class="col-md-3"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
+                <div class="col-md-3"><i class="fa fa-github" aria-hidden="true"></i></div>
+
+              </div>
+              
+              
+              
+              </div>
+        </div>
+      </div>
+
+      </div>
+
       
-      <p>c 2022 Peaky Bdders</p>
-    </footer>
-    
+
+    </section>
+    <section>
+      <footer>
+      
+        <p align="center"><i class="fa fa-copyright" aria-hidden="true"></i> 2022 Picky Bidders</p>
+      </footer>
+      
+    </section>
+   
         
        
         

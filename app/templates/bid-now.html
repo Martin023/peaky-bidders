@@ -33,6 +33,30 @@
                 </form>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+        <div>
+
+            {{wtf.quick_form(bidform)}}
+            
+            <!-- <form action='#' method="post">
+                <h4>Enter BID: </h4>
+                <p>Bid will be entered o your behalf up to your selected maximum bid.</p>
+                <p>Bid range : 300,000Ksh - 1.2M ksh</p>
+                <label for="Bid amount">Bidders stake:
+                <input id="price"type="number" placeholder="Bid amount"
+                name="price"></input>
+
+                
+            </label>
+            <p>Currency converter</p>
+        
+            <button type="submit">Confirm Bid</button>
+            <button>Cancel</button>
+
+            </form> -->
+            
+>>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
         </div>
         <div class="col-md-3"></div>
     </div>
@@ -45,12 +69,20 @@
        <div class="col-md-5">
         <div>
             <h2>SUMMARY</h2>
+<<<<<<< HEAD
             {% for itemBid in itemBid %}
 
             <p>Item bid on: {{itemBid.item}} </p>
             <p>Payment method: {{itemBid.owner}}</p>
             <p>Thank you!:{{itemBid.price}} </p>
             {% endfor %}
+=======
+    
+            <p>Item bid on: {{price}}</p>
+            <p>Date: </p>
+            <p>Payment method: </p>
+            <p>Thank you!: </p>
+>>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
         </div>
     </div>
    </div>
