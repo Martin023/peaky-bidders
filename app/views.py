@@ -1,16 +1,12 @@
-from hashlib import new
 import os
 import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
-<<<<<<< HEAD
-from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm, PurchaseItemForm, BidForm
+
+from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm, BidForm, PurchaseItemForm
 from app.models import User, Item, Bids
-=======
-from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm,BidForm
-from app.models import User, Item,Bids
->>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
+
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -105,7 +101,7 @@ def admin_page():
         db.session.commit()
 
         return redirect(url_for('cars'))
-    return render_template('admin.html', form=form, item=item)
+    return render_template('admin.html', form=form)
 
 
 # FUNCTIONALITY
@@ -164,7 +160,6 @@ def furniture():
     return render_template('furniture.html', title=title, furniture=furniture)
 
 
-<<<<<<< HEAD
 @app.route("/bid/<int:id>", methods=['GET', 'POST'])
 @login_required
 def bid(id):
@@ -180,37 +175,3 @@ def bid(id):
     return render_template('bid-now.html', form=form, itemBid=itemBid)
 
 
-# @app.route("/newbid")
-# @login_required
-# def new_bid():
-#     itemBid = Bids.query.all()
-#
-#     return render_template('new_bid.html', itemBid=itemBid)
-=======
-@app.route("/bid", methods=['GET', 'POST'])
-@login_required
-def bid():
-
-    bidform=BidForm()
-    user=User.query.filter_by(id=current_user.id).first()
-
-    item = Item.query.filter_by(id=id).first()
-
-    if user is None:
-        
-        return redirect(url_for('login'))
-
-    if bidform.validate_on_submit():
-        
-        # price=bidform.price.data
-
-        new_bid= Bids(price=bidform.price.data)
-
-        db.session.add(new_bid)
-        db.session.commit()
-
-        return redirect(url_for('bid'))
-
-
-    return render_template('bid-now.html',user=user ,item=item, new_bid=new_bid)
->>>>>>> 13bea6d24cdb4154a9e8e2a111b73ba1f001a37d
