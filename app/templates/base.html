@@ -44,7 +44,9 @@
                 <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
               {% else %}
                 <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                
                 <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+                <a class="nav-item nav-link" href="{{ url_for('admin_page') }}">Admin</a>
               {% endif %}
             </div>
           </div>
