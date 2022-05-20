@@ -3,8 +3,8 @@ import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
-from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm
-from app.models import User, Item
+from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, ItemsForm, PurchaseItemForm, BidForm
+from app.models import User, Item, Bids
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -123,11 +123,12 @@ def jewellery():
 
 @app.route('/home/cars')
 def cars():
+    purchase_item = PurchaseItemForm()
     title = 'Vintage cars'
 
     cars = Item.query.filter_by(category='Classic Cars').all()
 
-    return render_template('cars.html', title=title, cars=cars)
+    return render_template('cars.html', title=title, cars=cars, purchase_item=purchase_item)
 
 
 @app.route('/home/artworks')
@@ -157,6 +158,24 @@ def furniture():
     return render_template('furniture.html', title=title, furniture=furniture)
 
 
-@app.route("/bid")
-def bid():
-    return render_template('bid-now.html')
+@app.route("/bid/<int:id>", methods=['GET', 'POST'])
+@login_required
+def bid(id):
+    form = BidForm()
+    itemBid = Bids.query.filter_by(id=id)
+    print(itemBid)
+    if form.validate_on_submit():
+        bid = Bids(item=form.name.data, price=form.price.data, owner=current_user.username)
+        db.session.add(bid)
+        db.session.commit()
+        flash('Your bid has been recorded', 'success')
+        return redirect(url_for('bid', id=id))
+    return render_template('bid-now.html', form=form, itemBid=itemBid)
+
+
+# @app.route("/newbid")
+# @login_required
+# def new_bid():
+#     itemBid = Bids.query.all()
+#
+#     return render_template('new_bid.html', itemBid=itemBid)
