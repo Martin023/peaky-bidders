@@ -174,4 +174,3 @@ def bid(id):
         return redirect(url_for('bid', id=id))
     return render_template('bid-now.html', form=form, itemBid=itemBid)
 
-
