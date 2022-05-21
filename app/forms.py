@@ -3,7 +3,7 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
 from sqlalchemy import Integer
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField,TextAreaField,IntegerField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, SelectField, TextAreaField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from app.models import User, Item, Bids
 
@@ -61,7 +61,7 @@ class UpdateAccountForm(FlaskForm):
 class ItemsForm(FlaskForm):
     name = StringField('Item Name',
                        validators=[DataRequired(), Length(min=2, max=20)])
-    picture = FileField('Add Item Picture', validators=[FileAllowed(['png', 'jpg'])])
+    image_file = StringField('Image Link', validators=[DataRequired()])
     category = SelectField('Category', choices=[('Classic Cars', 'Classic Cars'), ('Electronics', 'Electronics'),
                                                 ('Furniture', 'Furniture'), ('Jewellery', 'Jewellery'),
                                                 ('Artworks', 'Artworks'),

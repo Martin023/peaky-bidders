@@ -93,10 +93,7 @@ def account():
 def admin_page():
     form = ItemsForm()
     if form.validate_on_submit():
-        if form.picture.data:
-            picture_file = save_picture(form.picture.data)
-            item = Item(name=form.name.data, category=form.category.data, description=form.description.data,
-                        price=form.price.data, image_file=picture_file)
+        item = Item(name=form.name.data, category=form.category.data, description=form.description.data,price=form.price.data, image_file=form.image_file.data)
         db.session.add(item)
         db.session.commit()
 

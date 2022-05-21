@@ -21,7 +21,7 @@
         <div class="card bid-item">
             <div class="row">
                 <div class="col-md-4">
-                   <img class="card-img-top" src="https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmZ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500" alt="Card image cap"> 
+                    <img class="card-img-top" src={{item.image_file}} alt="{{item.image_file}}">
                 </div>
                 <div class="col-md-5">
                 <div class="card-body">
@@ -35,7 +35,7 @@
              </div>
                 <div class="col-md-3">
                     <p class="card-text"><small class="text-muted">{{item.price}}</small></p>
-                    <button class="bid" ><a href="{{ url_for('bid') }}">BID</a></button>
+                    <button class="bid" ><a href="#">BID</a></button>
                 </div>
 
             </div>
